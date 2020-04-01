@@ -76,5 +76,5 @@ const render=name=>{
 }
 
 const init=()=>{
-	render("mahanamakkara");//
+	render("anekajati");//
 }
