@@ -1,0 +1,8 @@
+.unit {position: relative}
+chi {position: absolute; top:1em; white-space: nowrap}
+button {font-size:120%;}
+.pli {font-size:150% ;font-family: Tahoma;color:brown;}
+.unit::after {content:" ";}
+.trans {color:blue;cursor: pointer;font-size:150%;}
+.word{text-align: center}
+.hr {width:100%;border-bottom: dashed 1px brown}

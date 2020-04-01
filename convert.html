@@ -1,0 +1,45 @@
+<html><head>
+<meta charset="UTF-8">
+<link href="main.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<div>
+<style>
+	textarea {font-size: 100%}
+</style>
+<textarea id="text1" rows=20 cols=80>Pà todayaü bà ladivà karaü va,
+majjhe yatãnaü lalitaü sirãhi;
+puõ õ indusaï kà samukhaü anejaü ,
+vandà mi sabba¤ ¤ umahaü munindaü .
+6. Upetapu¤ ¤ o varabodhimå le,
+sasenamà raü sugato jinitvà ;</textarea>
+<br/>
+<button onclick="convert()">Convert</button>
+<script>
+	const convtbl=[
+		[/￾/g,""],[//g,"-"],
+		[/ñ/g,"ṭ"],[/Ñ/g,"Ṭ"], 
+		[/ü/g,"ṃ"],[/Ü/g,"Ṃ"],
+		[/¤ ?/g,"ñ"],[/¥ ?/g,"Ñ"],
+		[/à ?/g,"ā"],[/À ?/g,"Ā"],
+		[/ï ?/g,"ṅ"],[/Ï ?/g,"Ṅ"],
+		[/õ ?/g,"ṇ"],[/Õ ?/g,"Ṇ"],
+		[/ó ?/g,"ḍ"],[/Ó ?/g,"Ḍ"],
+		[/å ?/g,"ū"],[/Å ?/g,"Ū"],
+		[/ã ?/g,"ī"],[/Ã ?/g,"Ī"],
+		[/ë ?/g,"ḷ"],[/Ë ?/g,"Ḷ"],
+	
+	]
+	const convert=()=>{
+		const ele=document.getElementById("text1");
+		let s=ele.value;
+		convtbl.forEach(item=>{
+			s=s.replace(item[0],item[1]);
+		});
+		ele.value=s;
+	}
+
+</script>
+</body>
+</html>
